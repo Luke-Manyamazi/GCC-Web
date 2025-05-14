@@ -130,7 +130,7 @@ nav a:hover {
     width: 65%;
     margin-left: auto;
     margin-right: auto;
-    height: 60vh;
+    height: 70vh;
     margin-top: -100px;
     z-index: 10;
     position: relative;
@@ -234,19 +234,16 @@ nav a:hover {
     padding: 4rem;
 }
 
-/* Make the text take 50% of the space */
 .global-text {
     width: 50%;
     min-width: 280px;
     color: #2A2AD3;
 }
 
-/* Make the image container take 50% */
 .global-image {
     width: 40%;
 }
 
-/* Style the image to fill its container */
 .global-image img {
     width: 110%;
     height: auto;
@@ -254,7 +251,6 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Text styles */
 .global-text h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -274,7 +270,6 @@ nav a:hover {
 .from-right {
     opacity: 0;
     transform: translateX(100px);
-    /* default for .from-right */
     transition: all 0.8s ease-out;
 }
 
@@ -292,7 +287,7 @@ nav a:hover {
     width: 100%;
     height: 70vh;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', sans-serif;
 }
 
 .moving-text-image img {
@@ -311,7 +306,6 @@ nav a:hover {
     z-index: 1;
 }
 
-/* Common text styles */
 .moving-text-h1 {
     position: absolute;
     font-size: 8rem;
@@ -324,21 +318,18 @@ nav a:hover {
     animation-iteration-count: infinite;
 }
 
-/* Top text: left to right */
 .top-text {
     top: 10%;
     animation-name: moveRight;
     animation-direction: normal;
 }
 
-/* Bottom text: right to left */
 .bottom-text {
     bottom: 10%;
     animation-name: moveLeft;
     animation-direction: normal;
     color: transparent;
     -webkit-text-stroke: 1.5px white;
-    /* white border */
 }
 
 @keyframes moveRight {
@@ -503,4 +494,193 @@ nav a:hover {
     .footer-left p {
         margin: 1rem 0;
     }
+}
+
+.about-hero {
+    position: relative;
+    width: 100%;
+}
+
+.about-hero-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 90vh;
+    filter: brightness(80%);
+}
+
+.about-hero-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Stolzl', sans-serif;
+    background-color: #2A2AD3;
+    padding: 2rem;
+    width: 70%;
+    color: transparent;
+    -webkit-text-stroke: 1.5px white;
+}
+
+.about-vision {
+    display: flex;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(178, 236, 238);
+    gap: 2rem;
+}
+
+.vision-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.vision-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.vision-text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #2A2AD3;
+    line-height: 2rem;
+}
+
+.vision-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: #2A2AD3;
+}
+
+.vision-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgb(19, 11, 11);
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.statement-container {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    width: 69%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(189, 221, 222);
+}
+
+.group ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.toggle-trigger {
+    cursor: pointer;
+    position: relative;
+    padding-right: 2.5rem;
+    font-weight: bold;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.toggle-trigger:hover {
+    background: #e0e0e0;
+}
+
+.icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: list-item;
+    /* Show the item */
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.statement-container h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: #2A2AD3;
+}
+
+.pastors h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: #2A2AD3;
+    text-align: center;
+}
+
+.pastors-container {
+    display: flex;
+    flex-direction: row;
+    width: 72.5%;
+    margin: 0 auto;
+    background-color: rgb(178, 236, 238);
+    overflow: hidden;
+    min-height: 400px;
+    margin-bottom: 2rem;
+}
+
+.pastor-text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(178, 236, 238);
+    font-family: 'Montserrat', sans-serif;
+    color: #2A2AD3;
+    line-height: 2rem;
+}
+
+.pastor-text h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pastor-text p {
+    font-size: 1.2rem;
+    color: #130b0b;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.pastor-img {
+    flex: 1;
+    height: 100%;
+}
+
+.pastor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }

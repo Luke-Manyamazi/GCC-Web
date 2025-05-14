@@ -26,3 +26,24 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".from-left, .from-right").forEach((el) => {
   observer.observe(el);
 });
+
+document.querySelectorAll(".toggle-trigger").forEach(function (trigger) {
+  trigger.addEventListener("click", function () {
+    const listItems = trigger
+      .closest("ul")
+      .querySelectorAll("li:not(.toggle-trigger)");
+    listItems.forEach((item) => {
+      item.classList.toggle("visible");
+      item.classList.toggle("hidden");
+    });
+
+    const icon = trigger.querySelector(".icon");
+    if (icon.classList.contains("fa-plus-circle")) {
+      icon.classList.remove("fa-plus-circle");
+      icon.classList.add("fa-minus-circle");
+    } else {
+      icon.classList.remove("fa-minus-circle");
+      icon.classList.add("fa-plus-circle");
+    }
+  });
+});
