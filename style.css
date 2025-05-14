@@ -1,7 +1,6 @@
 @font-face {
     font-family: "Stolzl";
     src: url('./assets/fonts/stolzl_bold.otf') format('opentype');
-    font-weight: bold;
     font-style: normal;
 
 }
@@ -50,7 +49,14 @@ body {
 
 nav a {
     margin: 0 15px;
-    font-size: 24px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+nav a:hover {
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .carousel {
@@ -88,7 +94,6 @@ nav a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    /* adjust darkness */
     z-index: 1;
 }
 
@@ -133,7 +138,7 @@ nav a {
 
 .welcome-image img {
     max-width: 100%;
-    height: 450px;
+    height: 600px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
@@ -222,7 +227,7 @@ nav a {
     flex-wrap: wrap;
     background-color: rgb(178, 202, 238);
     color: #2A2AD3;
-    font-family: "Nunito", "Quicksand", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
@@ -261,8 +266,7 @@ nav a {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #2A2AD3;
-    font-family: "Nunito", "Quicksand", sans-serif;
-    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
 }
 
@@ -384,26 +388,34 @@ nav a {
     flex-direction: column;
     justify-content: center;
     font-size: 1.2rem;
-    font-family: "Nunito", "Quicksand", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #2A2AD3;
+    line-height: 2rem;
 }
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #2A2AD3;
-    padding: 2rem;
+    padding: 1rem;
     flex-wrap: wrap;
-    gap: 3rem;
     color: white;
     font-family: "Nunito", "Quicksand", sans-serif;
-    margin-right: auto;
     width: 100%;
+    height: 15rem;
+
 }
 
-.footer-left,
-.footer-right {
-    flex: 1;
-    min-width: 250px;
+.footer-content {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+
 }
 
 .footer-left h3 {
@@ -414,25 +426,6 @@ nav a {
 .footer-left p {
     margin: 0 8rem 0;
     line-height: 2;
-}
-
-.footer-right ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-right li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-right a {
-    text-decoration: none;
-    color: #007bff;
-    /* bootstrap blue or your brand color */
-}
-
-.footer-right a:hover {
-    text-decoration: underline;
 }
 
 .social-icons {
@@ -446,15 +439,14 @@ nav a {
 .social-icons img {
     width: 32px;
     height: 32px;
-    filter: brightness(2) saturate(100%);
-    /* makes image pure black */
+    filter: brightness(1) saturate(100%);
     transition: transform 0.2s ease;
     cursor: pointer;
 }
 
 
 .social-icons img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
 @media screen and (max-width: 768px) {
