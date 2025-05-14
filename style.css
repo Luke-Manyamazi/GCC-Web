@@ -1,11 +1,10 @@
-/* === Fonts === */
 @font-face {
     font-family: "Stolzl";
     src: url('./assets/fonts/stolzl_bold.otf') format('opentype');
     font-style: normal;
+
 }
 
-/* === Base Mobile Styles === */
 body {
     margin: 0;
     font-family: "Nunito", "Quicksand", sans-serif;
@@ -23,21 +22,24 @@ body {
 
 #logo {
     filter: brightness(0) invert(2);
-}
 
-/* Header Container for Mobile */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #2A2AD3;
-    padding: 10px 20px;
-    gap: 10px;
-    text-align: center;
 }
 
 .container img {
-    width: 150px;
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #2A2AD3;
+    margin: 0;
+    padding-left: 200px;
+    padding-right: 200px;
+    justify-content: space-between;
+    gap: 20px;
+    vertical-align: middle;
+    padding-top: 10px;
 }
 
 .container a {
@@ -45,15 +47,9 @@ body {
     color: white;
 }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
 nav a {
-    font-size: 16px;
+    margin: 0 15px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
 }
@@ -63,52 +59,14 @@ nav a:hover {
     transition: color 0.3s ease;
 }
 
-/* === Tablet Styles (768px and above) === */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 60px;
-    }
-
-    .container img {
-        width: 180px;
-    }
-
-    nav a {
-        font-size: 18px;
-    }
-}
-
-/* === Desktop Styles (1024px and above) === */
-@media (min-width: 1024px) {
-    .container {
-        padding: 10px 200px;
-    }
-
-    .container img {
-        width: 200px;
-    }
-
-    nav a {
-        margin: 0 15px;
-        font-size: 20px;
-    }
-}
-
-
-/* === Carousel Wrapper === */
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 60vh;
-    /* Smaller height on mobile */
-    padding-top: 70px;
-    /* Slightly reduced to save space on small screens */
+    height: 80vh;
+    padding-top: 80px;
 }
 
-/* === Carousel Slide === */
 .carousel-slide {
     position: absolute;
     width: 100%;
@@ -122,7 +80,6 @@ nav a:hover {
     z-index: 1;
 }
 
-/* === Carousel Image === */
 .carousel-slide img {
     width: 100%;
     height: 100%;
@@ -130,7 +87,6 @@ nav a:hover {
     z-index: 1;
 }
 
-/* === Overlay Effect === */
 .overlay {
     position: absolute;
     top: 0;
@@ -141,258 +97,175 @@ nav a:hover {
     z-index: 1;
 }
 
-/* === Hero Text (Mobile View) === */
 .hero-text {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%) translateY(20px);
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.8s ease;
     z-index: 2;
     color: white;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 6rem;
+    text-align: left;
     padding: 0 1rem;
     font-family: "Montserrat", "Nunito", "Quicksand", sans-serif;
 }
 
-/* === Show Hero Text when Slide is Active === */
+
 .carousel-slide.active .hero-text {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0);
 }
 
-/* === Tablet View (768px and up) === */
-@media (min-width: 768px) {
-    .carousel {
-        height: 70vh;
-        padding-top: 80px;
-    }
-
-    .hero-text {
-        font-size: 4rem;
-        text-align: center;
-    }
-}
-
-/* === Desktop View (1024px and up) === */
-@media (min-width: 1024px) {
-    .carousel {
-        height: 80vh;
-    }
-
-    .hero-text {
-        top: 30%;
-        font-size: 6rem;
-        text-align: left;
-        padding: 0 2rem;
-    }
-}
-
-
 .welcome-section {
     display: flex;
-    flex-direction: column;
-    /* Stack content vertically on mobile */
     align-items: center;
-    gap: 2rem;
-    padding: 2rem 1rem;
+    gap: 4rem;
+    padding: 4rem;
+    flex-wrap: wrap;
     background-color: #2A2AD3;
     color: white;
     font-family: "Nunito", "Quicksand", sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
-    /* Let content define height on small screens */
-    margin-top: 0;
-    position: relative;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    margin-top: -100px;
     z-index: 10;
+    position: relative;
 }
 
 .welcome-image img {
-    width: 100%;
-    height: auto;
-    /* Auto height for responsive scaling */
     max-width: 100%;
+    height: 600px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 .welcome-text {
     flex: 1;
-    min-width: 260px;
+    min-width: 280px;
     color: white;
-    text-align: center;
 }
 
 .welcome-text h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-family: "Montserrat", sans-serif;
+    color: white;
 }
 
 .welcome-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    color: white;
     font-family: "Nunito", "Quicksand", sans-serif;
     font-weight: lighter;
-    margin-bottom: 1rem;
+    align-items: left;
 }
 
-/* === Flip Button Styling (Mobile First) === */
 .btn-flip {
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    line-height: 40px;
     position: relative;
+    text-align: center;
+    letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    line-height: 40px;
-    letter-spacing: 1px;
-    outline: 0;
-    opacity: 1;
-    text-align: center;
-}
 
-.btn-flip::before,
-.btn-flip::after {
-    content: attr(data-front);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
-    transition: 0.5s;
-    backface-visibility: hidden;
-}
-
-.btn-flip::before {
-    content: attr(data-front);
-    color: white;
-    border: 2px solid white;
-    padding: 0 30px;
-    transform: translateY(0) rotateX(0);
-    opacity: 1;
-}
-
-.btn-flip::after {
-    content: attr(data-back);
-    color: #2A2AD3;
-    background: white;
-    transform: translateY(-50%) rotateX(90deg);
-    opacity: 0;
-}
-
-.btn-flip:hover::before {
-    transform: translateY(50%) rotateX(90deg);
-    opacity: 0;
 }
 
 .btn-flip:hover::after {
-    transform: translateY(0) rotateX(0);
     opacity: 1;
+    transform: translateY(0) rotateX(0);
 }
 
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .welcome-section {
-        flex-direction: row;
-        padding: 3rem;
-        width: 90%;
-        height: auto;
-    }
-
-    .welcome-text {
-        text-align: left;
-    }
-
-    .welcome-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .welcome-text p {
-        font-size: 1.1rem;
-    }
-
-    .welcome-image img {
-        height: 400px;
-        max-width: 500px;
-    }
+.btn-flip:hover::before {
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
 }
 
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .welcome-section {
-        width: 65%;
-        padding: 4rem;
-        height: 70vh;
-        margin-top: -100px;
-    }
-
-    .welcome-text h2 {
-        font-size: 3rem;
-    }
-
-    .welcome-text p {
-        font-size: 1.2rem;
-    }
-
-    .welcome-image img {
-        height: 600px;
-        max-width: 600px;
-    }
+.btn-flip::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #2A2AD3;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: white;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
 }
 
+.btn-flip::before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: white;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: 0.5s;
+    position: relative;
+    border: 2px solid white;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+}
 
 .global-section {
     display: flex;
-    flex-direction: column;
-    /* Stack items vertically on small screens */
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
+    flex-wrap: wrap;
     background-color: rgb(178, 202, 238);
     color: #2A2AD3;
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    padding: 2rem 1rem;
-    margin: 0 auto;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
 }
 
 .global-text {
-    width: 100%;
+    width: 50%;
+    min-width: 280px;
     color: #2A2AD3;
-    text-align: center;
+}
+
+.global-image {
+    width: 40%;
+}
+
+.global-image img {
+    width: 110%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .global-text h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-family: "Montserrat", sans-serif;
+    color: #2A2AD3;
 }
 
 .global-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #2A2AD3;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
 }
 
-.global-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.global-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* === Animation Classes === */
 .from-left,
 .from-right {
     opacity: 0;
@@ -409,63 +282,10 @@ nav a:hover {
     transform: translateX(0);
 }
 
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .global-section {
-        flex-direction: row;
-        padding: 3rem;
-        width: 90%;
-    }
-
-    .global-text {
-        width: 50%;
-        text-align: left;
-    }
-
-    .global-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .global-text p {
-        font-size: 1.1rem;
-    }
-
-    .global-image {
-        width: 45%;
-    }
-
-    .global-image img {
-        width: 100%;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .global-section {
-        width: 65%;
-        padding: 4rem;
-        gap: 4rem;
-    }
-
-    .global-text h2 {
-        font-size: 3rem;
-    }
-
-    .global-text p {
-        font-size: 1.2rem;
-    }
-
-    .global-image img {
-        width: 110%;
-    }
-}
-
-
 .moving-text {
     position: relative;
     width: 100%;
-    height: 60vh;
-    /* Slightly reduced for better fit on mobile */
+    height: 70vh;
     overflow: hidden;
     font-family: 'Stolzl', sans-serif;
 }
@@ -488,8 +308,7 @@ nav a:hover {
 
 .moving-text-h1 {
     position: absolute;
-    font-size: 2.5rem;
-    /* Mobile size */
+    font-size: 8rem;
     font-weight: 900;
     color: white;
     white-space: nowrap;
@@ -510,10 +329,9 @@ nav a:hover {
     animation-name: moveLeft;
     animation-direction: normal;
     color: transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1.5px white;
 }
 
-/* === Animations === */
 @keyframes moveRight {
     0% {
         left: -100%;
@@ -534,51 +352,17 @@ nav a:hover {
     }
 }
 
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .moving-text {
-        height: 65vh;
-    }
-
-    .moving-text-h1 {
-        font-size: 4rem;
-    }
-
-    .bottom-text {
-        -webkit-text-stroke: 1.2px white;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .moving-text {
-        height: 70vh;
-    }
-
-    .moving-text-h1 {
-        font-size: 8rem;
-    }
-
-    .bottom-text {
-        -webkit-text-stroke: 1.5px white;
-    }
-}
-
-
 .church-locations {
     display: flex;
-    flex-direction: column;
-    /* Stack on small screens */
-    width: 90%;
-    margin: 2rem auto;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(178, 202, 238);
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 2rem;
 }
 
 .location-image {
-    width: 100%;
-    height: auto;
+    flex: 1;
     overflow: hidden;
 }
 
@@ -589,92 +373,62 @@ nav a:hover {
 }
 
 .location-text {
-    width: 100%;
-    padding: 1rem 0;
+    flex: 1;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     color: #2A2AD3;
-    line-height: 1.6rem;
+    line-height: 2rem;
 }
-
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .church-locations {
-        flex-direction: row;
-        width: 85%;
-        padding: 2.5rem;
-        gap: 2rem;
-    }
-
-    .location-text {
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        padding: 0 1rem;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .church-locations {
-        width: 72%;
-        padding: 3rem;
-        gap: 2.5rem;
-    }
-
-    .location-text {
-        font-size: 1.2rem;
-        line-height: 2rem;
-        padding: 0 2rem;
-    }
-}
-
 
 .footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     background-color: #2A2AD3;
-    padding: 2rem 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
     color: white;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
+    height: 15rem;
+
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1800px;
     width: 100%;
-    max-width: 1200px;
-    text-align: center;
+    height: 100%;
+
 }
 
 .footer-left h3 {
-    margin: 0;
-    font-size: 1.5rem;
+    margin: 1rem 6rem 0;
+    font-size: 2em;
 }
 
 .footer-left p {
-    margin: 0;
-    line-height: 1.6;
-    font-size: 1rem;
-    padding: 0 1rem;
+    margin: 0 6rem 0;
+    line-height: 2;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    align-items: center;
     margin-top: 1rem;
 }
 
 .social-icons img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     filter: brightness(1) saturate(100%);
     transition: transform 0.2s ease;
     cursor: pointer;
@@ -684,55 +438,63 @@ nav a:hover {
     transform: scale(1.5);
 }
 
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        padding: 0 2rem;
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .footer-left h3 {
+    .carousel {
+        height: 50vh;
+    }
+
+    .hero-text {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
+        top: 50%;
     }
 
-    .footer-left p {
-        font-size: 1.1rem;
-        padding: 0;
+    .welcome-section,
+    .global-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        width: 100%;
+        height: auto;
     }
 
-    .social-icons {
-        justify-content: flex-start;
+    .welcome-image img,
+    .global-image img {
+        height: auto;
+        width: 100%;
     }
-}
 
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
+    .global-text,
+    .global-image {
+        width: 100%;
+    }
+
+    .church-locations {
+        flex-direction: column;
+        width: 100%;
+    }
+
     .footer {
-        padding: 3rem 4rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .footer-content {
-        gap: 3rem;
+    .footer-left,
+    .footer-right {
+        margin: 0;
     }
 
-    .footer-left h3 {
-        font-size: 2.2rem;
-    }
-
+    .footer-left h3,
     .footer-left p {
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-
-    .social-icons img {
-        width: 32px;
-        height: 32px;
+        margin: 1rem 0;
     }
 }
-
 
 .about-hero {
     position: relative;
@@ -740,140 +502,83 @@ nav a:hover {
 }
 
 .about-hero-image img {
-    width: 100%;
-    height: 70vh;
     object-fit: cover;
+    width: 100%;
+    height: 90vh;
     filter: brightness(80%);
 }
 
 .about-hero-text {
     position: absolute;
-    top: 40%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
     text-align: center;
     font-family: 'Stolzl', sans-serif;
     background-color: #2A2AD3;
-    padding: 1.5rem 1rem;
-    width: 90%;
-    font-size: 2.5rem;
+    padding: 2rem;
+    width: 70%;
     color: transparent;
-    -webkit-text-stroke: 1.2px white;
+    -webkit-text-stroke: 1.5px white;
 }
 
-/* About Vision Section */
 .about-vision {
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 2rem auto;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(178, 236, 238);
     gap: 2rem;
-    padding: 2rem 1rem;
 }
 
 .vision-image {
-    width: 100%;
+    flex: 1;
     overflow: hidden;
 }
 
 .vision-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+
 }
 
 .vision-text {
-    width: 100%;
+    flex: 1;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     color: #2A2AD3;
-    line-height: 1.6rem;
+    line-height: 2rem;
 }
 
 .vision-text h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    font-family: "Montserrat", sans-serif;
     color: #2A2AD3;
 }
 
 .vision-text p {
-    font-size: 1rem;
-    color: #131010;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgb(19, 11, 11);
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
-}
-
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .about-hero-image img {
-        height: 85vh;
-    }
-
-    .about-hero-text {
-        font-size: 4rem;
-        width: 70%;
-    }
-
-    .about-vision {
-        flex-direction: row;
-        width: 85%;
-        padding: 3rem;
-    }
-
-    .vision-image,
-    .vision-text {
-        flex: 1;
-    }
-
-    .vision-text h2 {
-        font-size: 2rem;
-    }
-
-    .vision-text p {
-        font-size: 1.1rem;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .about-hero-image img {
-        height: 90vh;
-    }
-
-    .about-hero-text {
-        font-size: 5rem;
-        padding: 2rem;
-        width: 60%;
-    }
-
-    .vision-text {
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-
-    .vision-text p {
-        font-size: 1.2rem;
-    }
 }
 
 .statement-container {
     font-family: Arial, sans-serif;
-    padding: 1.5rem 1rem;
-    width: 90%;
-    margin: 2rem auto;
+    padding: 2rem;
+    width: 69%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(189, 221, 222);
-    border-radius: 12px;
-}
-
-.statement-container h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: "Montserrat", sans-serif;
-    color: #2A2AD3;
-    text-align: center;
 }
 
 .group ul {
@@ -885,11 +590,11 @@ nav a:hover {
 .toggle-trigger {
     cursor: pointer;
     position: relative;
-    padding: 1rem 2.5rem 1rem 1rem;
+    padding-right: 2.5rem;
     font-weight: bold;
     background: #f4f4f4;
+    padding: 1rem;
     border-radius: 8px;
-    transition: background 0.3s ease;
 }
 
 .toggle-trigger:hover {
@@ -911,51 +616,23 @@ nav a:hover {
 
 .visible {
     display: list-item;
+    /* Show the item */
     background: #f4f4f4;
     padding: 1rem;
     border-radius: 8px;
     margin-top: 0.5rem;
 }
 
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .statement-container {
-        width: 80%;
-        padding: 2rem;
-    }
-
-    .statement-container h2 {
-        font-size: 2.5rem;
-    }
-
-    .visible {
-        padding: 1.2rem;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .statement-container {
-        width: 70%;
-        padding: 3rem;
-    }
-
-    .statement-container h2 {
-        font-size: 3rem;
-    }
-
-    .toggle-trigger {
-        font-size: 1.1rem;
-    }
-
-    .icon {
-        font-size: 1.8rem;
-    }
+.statement-container h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: #2A2AD3;
 }
 
 .pastors h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     font-family: "Montserrat", sans-serif;
     color: #2A2AD3;
     text-align: center;
@@ -963,37 +640,42 @@ nav a:hover {
 
 .pastors-container {
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto 2rem auto;
+    flex-direction: row;
+    width: 72.5%;
+    margin: 0 auto;
     background-color: rgb(178, 236, 238);
     overflow: hidden;
-    border-radius: 12px;
+    min-height: 400px;
+    margin-bottom: 2rem;
 }
 
 .pastor-text {
-    padding: 1.5rem;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(178, 236, 238);
     font-family: 'Montserrat', sans-serif;
     color: #2A2AD3;
-    background-color: rgb(178, 236, 238);
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
 .pastor-text h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .pastor-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #130b0b;
     line-height: 1.6;
     text-align: left;
 }
 
 .pastor-img {
-    width: 100%;
-    height: 250px;
+    flex: 1;
+    height: 100%;
 }
 
 .pastor-img img {
@@ -1001,63 +683,4 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-/* === Tablet View (min-width: 768px) === */
-@media (min-width: 768px) {
-    .pastors h2 {
-        font-size: 2.5rem;
-    }
-
-    .pastors-container {
-        flex-direction: row;
-        width: 85%;
-    }
-
-    .pastor-img {
-        height: auto;
-        flex: 1;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 12px;
-        border-top-right-radius: 0;
-    }
-
-    .pastor-img img {
-        border-radius: 0;
-        height: 100%;
-    }
-
-    .pastor-text {
-        flex: 1;
-        padding: 2rem;
-    }
-
-    .pastor-text h3 {
-        font-size: 2rem;
-    }
-
-    .pastor-text p {
-        font-size: 1.1rem;
-    }
-}
-
-/* === Desktop View (min-width: 1024px) === */
-@media (min-width: 1024px) {
-    .pastors h2 {
-        font-size: 3rem;
-    }
-
-    .pastors-container {
-        width: 72.5%;
-    }
-
-    .pastor-text {
-        padding: 3rem;
-    }
-
-    .pastor-text p {
-        font-size: 1.2rem;
-    }
 }
