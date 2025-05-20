@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join Us</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js"></script>
   </head>
   <body>
     <section class="form-section">
+      <img
+        src="../assets/logo-blue.png"
+        alt="Grace Chapter Church logo with blue flame and cross"
+        class="logo"
+      />
       <h1>We’re excited to welcome you to Grace Chapter Church!</h1>
       <p>
         Fill in the form below to plan your visit, and we’ll send you an email
-        with all the details: directions, parking information, who to meet, and
-        where to register your kids (you can even pre-register them to save
-        time!).
+        or a message on WhatsApp with all the details: the house church pastor,
+        dates, venue, and directions.
       </p>
 
       <form id="visitForm">
@@ -35,13 +40,15 @@
         </div>
 
         <label for="email">Email address <span>*</span></label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="name@example.com"
-          required
-        />
+        <div class="email-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
 
         <label for="phone">Phone number <span>*</span></label>
         <div class="phone-group">
@@ -53,10 +60,33 @@
           <input type="tel" id="phone" name="phone" required />
         </div>
 
-        <button type="submit">Submit</button>
+        <label for="country">Country <span>*</span></label>
+        <div class="country-group">
+          <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="United Kingdom">United Kingdom</option>
+          </select>
+        </div>
+
+        <label for="city">City <span>*</span></label>
+        <div class="city-group">
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="e.g., Cape Town"
+            required
+          />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+          <a href="../index.html" class="back-link">Back</a>
+        </div>
       </form>
     </section>
-
-    <script src="script.js"></script>
   </body>
 </html>
