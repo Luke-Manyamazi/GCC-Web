@@ -9,8 +9,10 @@
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap");
     </style>
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
@@ -21,7 +23,6 @@
         <div class="logo" id="logo">
           <a href="../index.html">
             <img src="../assets/logo-white.png" alt="White Logo" />
-
           </a>
         </div>
         <nav>
@@ -29,7 +30,7 @@
           <a href="about.html">About Us</a>
           <a href="./house-churches.html">House-Churches</a>
           <a href="./ministries.html">Ministries</a>
-          <a href="./events.html">Events</a>    
+          <a href="./events.html">Events</a>
           <a href="./contacts.html">Contacts</a>
         </nav>
       </div>
@@ -38,194 +39,213 @@
       <div class="about-hero-image">
         <img src="../assets/aboutimg.png" alt="Slide 1" />
         <div class="about-overlay"></div>
-        <h1 class="about-hero-text">Our mandate is to reveal Christ to the
-          world.</h1>
+        <h1 class="about-hero-text">
+          Our mandate is to reveal Christ to the world.
+        </h1>
       </div>
-      <br><br><br>
-      <div class="about-vision">
-        <div class="vision-image from-left">
-          <img src="../assets/vision.png" alt="Church Location" />
-        </div>
-        <div class="vision-text from-right">
-          <h2>About Us</h2>
+    </div>
+    <br /><br /><br />
+    <div class="about-vision">
+      <div class="vision-image from-left">
+        <img src="../assets/vision.png" alt="Church Location" />
+      </div>
+      <div class="vision-text from-right">
+        <h2>About Us</h2>
+        <p>
+          At Grace Chapter Church, we believe in the Word of God and everything
+          it declares about us. Our faith is in Jesus Christ, the Son of the one
+          and only living God.
+        </p>
+        <h2>Our Vision</h2>
+        <p>We Serve.</p>
+        <h2>Our Mission</h2>
+        <p>
+          <strong>Our mandate is to reveal Christ to the world.</strong><br />
+          We serve God by serving people in our communities through equipping
+          and empowering them by the Message of Grace resulting with them
+          resting in Christ, revealing Christ and reconciling the world to
+          Christ
+        </p>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div id="statement-container">
+      <h2>Statement of Faith</h2>
+
+      <!-- Group 1 -->
+      <div class="group">
+        <ul>
+          <li class="toggle-trigger" onclick="toggleGroup(this)">
+            We believe the Bible is inspired and empowered by God, infallible
+            and our authority.
+            <i class="fas fa-plus-circle icon"></i>
+          </li>
+          <li class="hidden">
+            We believe in one eternal God who exists as three persons: the
+            Father, Son, and Holy Spirit.
+          </li>
+          <li class="hidden">
+            We believe Jesus Christ is the Son of God, born of a virgin, lived a
+            sinless life, died on the cross, rose from the dead on the third
+            day, and is now seated at the right hand of God having accomplished
+            all that is necessary for man’s salvation.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 2 -->
+      <div class="group">
+        <ul>
+          <li class="toggle-trigger" onclick="toggleGroup(this)">
+            We believe it is essential for man to repent of sin and by faith
+            receive the finished work of Christ by confessing Him as Lord with
+            his mouth <br />
+            and believing in his heart resulting in regeneration by the Holy
+            Spirit.
+            <i class="fas fa-plus-circle icon"></i>
+          </li>
+          <li class="hidden">
+            We believe in water baptism in the name of the Father, Son, and Holy
+            Spirit as a symbol and testimony of faith in Jesus Christ.
+          </li>
+          <li class="hidden">
+            We believe in the indwelling and baptism of the Holy Spirit with the
+            evidence of speaking in tongues.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 3 -->
+      <div class="group">
+        <ul>
+          <li class="toggle-trigger" onclick="toggleGroup(this)">
+            We believe that the Holy Communion is a celebration of Jesus’ death
+            and resurrection.
+            <i class="fas fa-plus-circle icon"></i>
+          </li>
+          <li class="hidden">
+            We believe in divine healing—the restoration of health to those who
+            believe and act on God’s Word.
+          </li>
+          <li class="hidden">
+            We believe that by the stripes of Jesus we were healed.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 4 -->
+      <div class="group">
+        <ul>
+          <li class="toggle-trigger" onclick="toggleGroup(this)">
+            We believe that God has blessed us with all things and desires us to
+            prosper so that we may be a blessing to other people.
+            <i class="fas fa-plus-circle icon"></i>
+          </li>
+          <li class="hidden">
+            We believe in the imminent return of Jesus and that those who have
+            believed in Him will be resurrected to a heavenly dwelling in an
+            incorruptible body, and those who do not believe will join Satan and
+            his host in everlasting punishment.
+          </li>
+          <li class="hidden">
+            We believe all born-again believers have been commissioned to share
+            the Good news of Jesus Christ to the whole world.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pastors">
+      <h2>Meet Our Pastors</h2>
+      <div class="pastors-container">
+        <div class="pastor-text from-left">
+          <h3>Dan & Ria Zimuwandeyi</h3>
           <p>
-            At Grace Chapter Church, we believe in the Word of God and
-            everything it declares about us. Our faith is in Jesus Christ, the
-            Son of the one and only living God.
+            Grace Chapter Church is led by Pastors Dan and Ria Zimuwandeyi,
+            whose passion is to see Christ formed in people and families
+            restored by the Word of Grace. With a deep commitment to teaching,
+            shepherding, and empowering others, they have laid a strong
+            foundation for the church's house church model and international
+            outreach. Their leadership is marked by humility, vision, and a
+            desire to see every believer grow in faith and purpose. They are
+            supported by an incredible team of Campus Pastors across all
+            locations, who ensure that each local church thrives in unity, love,
+            and spiritual maturity. Together, they steward the vision God has
+            given for Grace Chapter Church: to raise strong families, serve
+            communities, and reveal Christ to the world.
           </p>
-          <h2>Our Vision</h2>
+        </div>
+        <div class="pastor-img from-right">
+          <img
+            src="../assets/our-pastors.png"
+            alt="Pastor Dan and Ria Zimuwandeyi"
+          />
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="moving-text">
+      <div class="moving-text-image">
+        <img src="../assets/house-churches.jpg" alt="Ladies smiling" />
+        <div class="overlay2"></div>
+
+        <h1 class="moving-text-h1 top-text">
+          WE ARE A CHURCH OF HOUSE CHURCHES
+        </h1>
+        <h1 class="moving-text-h1 bottom-text">
+          WE ARE A CHURCH OF HOUSE CHURCHES
+        </h1>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Grace Chapter Church</h3>
+          <p>hello@gracechapterchurch.online</p>
+          <p>pd@gracechapterchurch.online</p>
+          <p>+27 (0) 73 170 1167</p>
           <p>
-            We Serve.
-          </p>
-          <h2>Our Mission</h2>
-          <p>
-            <strong>Our mandate is to reveal Christ to the world.</strong><br>
-            We serve God by serving people in our communities through equipping
-            and empowering them by the Message of Grace resulting with them
-            resting in Christ, revealing Christ and reconciling the world to
-            Christ
+            We always love to hear from you, please feel free to contact us.
           </p>
         </div>
-      </div>
-      <br><br><br>
-      <div id="statement-container">
-        <h2>Statement of Faith</h2>
 
-        <!-- Group 1 -->
-        <div class="group">
-          <ul>
-            <li class="toggle-trigger" onclick="toggleGroup(this)">
-              We believe the Bible is inspired and empowered by God, infallible
-              and our authority.
-              <i class="fas fa-plus-circle icon"></i>
-            </li>
-            <li class="hidden">We believe in one eternal God who exists as three
-              persons: the Father, Son, and Holy Spirit.</li>
-            <li class="hidden">We believe Jesus Christ is the Son of God, born
-              of a virgin, lived a sinless life, died on the cross, rose from
-              the dead on the third day, and is now seated at the right hand of
-              God having accomplished all that is necessary for man’s
-              salvation.</li>
-          </ul>
-        </div>
-
-        <!-- Group 2 -->
-        <div class="group">
-          <ul>
-            <li class="toggle-trigger" onclick="toggleGroup(this)">
-              We believe it is essential for man to repent of sin and by faith
-              receive the finished work of Christ by confessing Him as Lord with
-              his mouth <br> and believing in his heart resulting in
-              regeneration by the Holy Spirit.
-              <i class="fas fa-plus-circle icon"></i>
-            </li>
-            <li class="hidden">We believe in water baptism in the name of the
-              Father, Son, and Holy Spirit as a symbol and testimony of faith in
-              Jesus Christ.</li>
-            <li class="hidden">We believe in the indwelling and baptism of the
-              Holy Spirit with the evidence of speaking in tongues. </li>
-          </ul>
-        </div>
-
-        <!-- Group 3 -->
-        <div class="group">
-          <ul>
-            <li class="toggle-trigger" onclick="toggleGroup(this)">
-              We believe that the Holy Communion is a celebration of Jesus’
-              death and resurrection.
-              <i class="fas fa-plus-circle icon"></i>
-            </li>
-            <li class="hidden">We believe in divine healing—the restoration of
-              health to those who believe and act on God’s Word.</li>
-            <li class="hidden">We believe that by the stripes of Jesus we were
-              healed.</li>
-          </ul>
-        </div>
-
-        <!-- Group 4 -->
-        <div class="group">
-          <ul>
-            <li class="toggle-trigger" onclick="toggleGroup(this)">
-              We believe that God has blessed us with all things and desires us
-              to prosper so that we may be a blessing to other people.
-              <i class="fas fa-plus-circle icon"></i>
-            </li>
-            <li class="hidden">We believe in the imminent return of Jesus and
-              that those who have believed in Him will be resurrected to a
-              heavenly dwelling in an incorruptible body, and those who do not
-              believe will join Satan and his host in everlasting
-              punishment.</li>
-            <li class="hidden">We believe all born-again believers have been
-              commissioned to share the Good news of Jesus Christ to the whole
-              world.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="pastors">
-        <h2>Meet Our Pastors</h2>
-        <div class="pastors-container">
-          <div class="pastor-text from-left">
-            <h3>Dan & Ria Zimuwandeyi</h3>
-            <p>
-              Grace Chapter Church is led by Pastors Dan and Ria Zimuwandeyi,
-              whose passion is to see Christ formed in people and families
-              restored by the Word of Grace. With a deep commitment to teaching,
-              shepherding, and empowering others, they have laid a strong
-              foundation for the church's house church model and international
-              outreach. Their leadership is marked by humility, vision, and a
-              desire to see every believer grow in faith and purpose. They are
-              supported by an incredible team of Campus Pastors across all
-              locations, who ensure that each local church thrives in unity,
-              love, and spiritual maturity. Together, they steward the vision
-              God has given for Grace Chapter Church: to raise strong families,
-              serve communities, and reveal Christ to the world.
-            </p>
-          </div>
-          <div class="pastor-img from-right">
-            <img src="../assets/our-pastors.png"
-              alt="Pastor Dan and Ria Zimuwandeyi" />
+        <div class="footer-right">
+          <h2>Check Out Our Social Media</h2>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/GraceChapterChurch"
+              target="_blank"
+            >
+              <img src="../assets/icons/facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com/grace_chapter_church?igsh=MThwdWUzOTczdXU3MQ=="
+              target="_blank"
+            >
+              <img src="../assets/icons/instagram.png" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.threads.com/@grace_chapter_church"
+              target="_blank"
+            >
+              <img src="../assets/icons/threads.png" alt="Threads" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@gracechapterchurch"
+              target="_blank"
+            >
+              <img src="../assets/icons/tiktok.png" alt="TikTok" />
+            </a>
+            <a
+              href="https://www.youtube.com/@GraceChapterChurch"
+              target="_blank"
+            >
+              <img src="../assets/icons/youtube.png" alt="YouTube" />
+            </a>
           </div>
         </div>
       </div>
-      <br /><br /><br />
-      <div class="moving-text">
-        <div class="moving-text-image">
-          <img src="../assets/house-churches.jpg" alt="Ladies smiling" />
-          <div class="overlay2"></div>
-
-          <h1 class="moving-text-h1 top-text">
-            WE ARE A CHURCH OF HOUSE CHURCHES
-          </h1>
-          <h1 class="moving-text-h1 bottom-text">
-            WE ARE A CHURCH OF HOUSE CHURCHES
-          </h1>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-left">
-            <h3>Grace Chapter Church</h3>
-            <p>hello@gracechapterchurch.online</p>
-            <p>pd@gracechapterchurch.online</p>
-            <p>+27 (0) 73 170 1167</p>
-            <p>
-              We always love to hear from you, please feel free to contact us.
-            </p>
-          </div>
-
-          <div class="footer-right">
-            <h2>Check Out Our Social Media</h2>
-            <div class="social-icons">
-              <a
-                href="https://www.facebook.com/GraceChapterChurch"
-                target="_blank">
-                <img src="../assets/icons/facebook.png" alt="Facebook" />
-              </a>
-              <a
-                href="https://www.instagram.com/grace_chapter_church?igsh=MThwdWUzOTczdXU3MQ=="
-                target="_blank">
-                <img src="../assets/icons/instagram.png" alt="Instagram" />
-              </a>
-              <a
-                href="https://www.threads.com/@grace_chapter_church"
-                target="_blank">
-                <img src="../assets/icons/threads.png" alt="Threads" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@gracechapterchurch"
-                target="_blank">
-                <img src="../assets/icons/tiktok.png" alt="TikTok" />
-              </a>
-              <a
-                href="https://www.youtube.com/@GraceChapterChurch"
-                target="_blank">
-                <img src="../assets/icons/youtube.png" alt="YouTube" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <script src="../script.js"></script>
-    </body>
-  </html>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

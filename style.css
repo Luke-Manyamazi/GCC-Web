@@ -1,15 +1,17 @@
+/* Font Imports */
 @font-face {
     font-family: "Stolzl";
-    src: url('./assets/fonts/stolzl_bold.otf') format('opentype');
+    src: url("./assets/fonts/stolzl_bold.otf") format("opentype");
     font-style: normal;
-
 }
 
+/* Main Styles */
 body {
     margin: 0;
-    font-family: "Nunito", "Quicksand", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
+/* Top Bar and Navigation styles */
 #top {
     position: fixed;
     top: 0;
@@ -22,7 +24,6 @@ body {
 
 #logo {
     filter: brightness(0) invert(2);
-
 }
 
 .container img {
@@ -50,7 +51,7 @@ body {
 nav a {
     margin: 0 15px;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: lighter;
 }
 
@@ -63,6 +64,7 @@ nav a:active {
     font-weight: bold;
 }
 
+/* Index Page Carousel and Styles start from here */
 .carousel {
     position: relative;
     overflow: hidden;
@@ -111,16 +113,16 @@ nav a:active {
     font-size: 4rem;
     text-align: center;
     padding: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 100%;
 }
-
 
 .carousel-slide.active .hero-text {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0);
 }
 
+/* Welcome Section */
 .welcome-section {
     display: flex;
     align-items: center;
@@ -128,7 +130,7 @@ nav a:active {
     padding: 2rem;
     flex-wrap: wrap;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -162,11 +164,12 @@ nav a:active {
     font-size: 1rem;
     line-height: 1.6;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 
     align-items: left;
 }
 
+/* Page Button Styles */
 .btn-flip {
     opacity: 1;
     outline: 0;
@@ -177,12 +180,11 @@ nav a:active {
     letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     margin-left: 10px;
     width: 300px;
     border-radius: 5%;
-
 }
 
 .btn-flip:hover::after {
@@ -207,7 +209,6 @@ nav a:active {
     background: black;
     content: attr(data-back);
     transform: translateY(-50%) rotateX(90deg);
-
 }
 
 .btn-flip::before {
@@ -223,15 +224,15 @@ nav a:active {
     border: 2px solid black;
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
-
 }
 
+/* Global Section */
 .global-section {
     display: flex;
     align-items: center;
     gap: 6rem;
     flex-wrap: wrap;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -268,11 +269,12 @@ nav a:active {
     font-size: 1rem;
     line-height: 1.6;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: left;
     padding: 1rem;
 }
 
+/* Moving Text Styles */
 .from-left,
 .from-right {
     opacity: 0;
@@ -293,10 +295,8 @@ nav a:active {
     position: relative;
     width: 100%;
     overflow: hidden;
-    font-family: 'Stolzl', sans-serif;
+    font-family: "Stolzl", sans-serif;
 }
-
-
 
 .moving-text-image img {
     width: 100%;
@@ -360,50 +360,73 @@ nav a:active {
     }
 }
 
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .carousel {
-        height: 50vh;
-    }
-
-    .hero-text {
-        font-size: 2rem;
-        top: 50%;
-    }
-
-    .welcome-section,
-    .global-section {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        width: 100%;
-        height: auto;
-    }
-
-    .welcome-image img,
-    .global-image img {
-        height: auto;
-        width: 100%;
-    }
-
-    .global-text,
-    .global-image {
-        width: 100%;
-    }
-
-    .church-locations {
-        flex-direction: column;
-        width: 100%;
-    }
-
+/* Church Locations Section Styles */
+.church-locations {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #62bfed;
+    gap: 2rem;
+    box-shadow: #000 0px 0px 20px 0px;
+    margin-bottom: 50px;
 }
 
+.location-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.location-image img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    line-height: 2rem;
+}
+
+.contact-locations {
+    max-width: 600px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.location-row {
+    display: grid;
+    grid-template-columns: 120px 50px 1fr;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.city {
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.person {
+    font-weight: 500;
+    color: white;
+}
+
+.phone {
+    color: #333;
+}
+
+/* About Page Styles start from here */
 .about-hero {
     position: relative;
     width: 100%;
@@ -418,14 +441,14 @@ nav a:active {
 
 .about-hero-text {
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
-    font-family: 'Stolzl', sans-serif;
-    background-color: #2A2AD3;
+    font-family: "Stolzl", sans-serif;
+    background-color: #2a2ad3;
     padding: 2rem;
     width: 70%;
     color: transparent;
@@ -462,8 +485,8 @@ nav a:active {
     flex-direction: column;
     justify-content: center;
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #2A2AD3;
+    font-family: "Montserrat", sans-serif;
+    color: #2a2ad3;
     line-height: 2rem;
 }
 
@@ -471,19 +494,20 @@ nav a:active {
     font-size: 2rem;
     margin-bottom: 0.2rem;
     font-family: "Montserrat", sans-serif;
-    color: #2A2AD3;
+    color: #2a2ad3;
 }
 
 .vision-text p {
     font-size: 1rem;
     line-height: 1.4;
     color: rgb(19, 11, 11);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: left;
 }
 
+/* Statement of Faith Styles */
 #statement-container {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 2rem;
     width: 69%;
     margin-left: auto;
@@ -536,14 +560,15 @@ nav a:active {
     font-size: 3rem;
     margin-bottom: 3rem;
     font-family: "Montserrat", sans-serif;
-    color: #2A2AD3;
+    color: #2a2ad3;
 }
 
+/* Pastors Section Styles*/
 .pastors h2 {
     font-size: 4rem;
     margin-bottom: 3rem;
     font-family: "Montserrat", sans-serif;
-    color: #2A2AD3;
+    color: #2a2ad3;
     text-align: center;
 }
 
@@ -563,8 +588,8 @@ nav a:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #2A2AD3;
+    font-family: "Montserrat", sans-serif;
+    color: #2a2ad3;
     line-height: 2rem;
 }
 
@@ -593,6 +618,7 @@ nav a:active {
     filter: contrast(1.2);
 }
 
+/* Join Us Form Styles */
 .form-section {
     max-width: 600px;
     margin: 3rem auto;
@@ -715,6 +741,7 @@ button:hover {
     color: #1ca9a5;
 }
 
+/* House Church Page Styles start from here */
 .house-church-hero-image img {
     object-fit: cover;
     width: 100%;
@@ -729,13 +756,13 @@ button:hover {
 
 .house-church-hero-text {
     position: absolute;
-    top: 15%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 4rem;
     text-align: center;
-    font-family: 'Stolzl', sans-serif;
+    font-family: "Stolzl", sans-serif;
     padding: 2rem;
     width: 70%;
 }
@@ -746,46 +773,54 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.4;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .intro h2 {
-    color: #2A2AD3;
-    font-family: 'Montserrat', sans-serif;
+    color: #2a2ad3;
+    font-family: "Montserrat", sans-serif;
 }
 
-.flex-container {
+.hse-flex-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* Display items in a row */
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
     gap: 2rem;
     padding: 2rem;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
 }
 
 .column {
+    flex: 1 1 calc(33.333% - 2rem);
+    /* 3 columns minus the gap */
     background-color: #fff;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    color: #2A2AD3;
+    font-family: "Montserrat", sans-serif;
+    color: #2a2ad3;
+    box-sizing: border-box;
+    width: 30%;
 }
 
 .column p {
     font-size: 1rem;
     line-height: 1.3;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: left;
 }
 
 .column h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #2A2AD3;
+    font-family: "Montserrat", sans-serif;
+    color: #2a2ad3;
 }
 
 .column img {
@@ -794,19 +829,7 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
-    .flex-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .column {
-        flex: 1;
-        margin: 0 1rem;
-    }
-
-}
-
+/* Ministries Page Styles start from here */
 .ministries-hero-image img {
     object-fit: cover;
     width: 100%;
@@ -822,13 +845,13 @@ button:hover {
 
 .ministries-hero-text {
     position: absolute;
-    top: 10%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 4rem;
     text-align: center;
-    font-family: 'Stolzl', sans-serif;
+    font-family: "Stolzl", sans-serif;
     padding: 2rem;
     width: 70%;
 }
@@ -841,13 +864,15 @@ button:hover {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+    width: 70%;
+    display: flex;
 }
 
 .section-title {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .section-subtitle {
@@ -855,13 +880,13 @@ button:hover {
     font-weight: 600;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .section-paragraph {
     margin-top: 1rem;
     color: #333;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5rem;
 }
 
@@ -871,14 +896,14 @@ button:hover {
     margin-top: 1.5rem;
 }
 
-.flex-container {
+.min-flex-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
 }
 
 .reverse {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
 
 .image-container,
@@ -902,7 +927,6 @@ button:hover {
     height: 25rem;
 }
 
-
 .responsive-image {
     width: 100%;
     border-radius: 1rem;
@@ -917,23 +941,6 @@ button:hover {
     text-align: center;
     border-radius: 0.75rem;
     margin-top: 1.5rem;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .flex-container {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .reverse {
-        flex-direction: row-reverse;
-    }
-
-    .text-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 /* Theme Colors */
@@ -973,14 +980,14 @@ button:hover {
     color: #1a237e;
     font-weight: 600;
     margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .section p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .section a {
@@ -1011,174 +1018,7 @@ ul li {
     color: #0d47a1;
 }
 
-@media screen and (max-width: 600px) {
-    .section {
-        padding: 1.5rem;
-    }
-
-    .section h2,
-    .section h3 {
-        font-size: 1.4rem;
-    }
-
-    .section p,
-    ul li {
-        font-size: 0.95rem;
-    }
-}
-
-.church-locations {
-    display: flex;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #62BFED;
-    gap: 2rem;
-    box-shadow: #000 0px 0px 20px 0px;
-    margin-bottom: 50px;
-}
-
-.location-image {
-    flex: 1;
-    overflow: hidden;
-}
-
-.location-image img {
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.location-text {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    line-height: 2rem;
-}
-
-.contact-locations {
-    max-width: 600px;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
-}
-
-.location-row {
-    display: grid;
-    grid-template-columns: 120px 50px 1fr;
-    gap: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.city {
-    font-weight: 600;
-    color: #1a237e;
-}
-
-.person {
-    font-weight: 500;
-    color: white;
-}
-
-.phone {
-    color: #333;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #2e3136;
-    color: #f9fafb;
-    padding: 3rem 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    margin-left: 300px;
-}
-
-.footer-left,
-.footer-right {
-    flex: 1;
-}
-
-.footer-left h3,
-.footer-right h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #62BFED;
-
-}
-
-.footer-left p {
-    line-height: 1;
-    font-size: 0.95rem;
-
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.social-icons a img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.1);
-    filter: none;
-}
-
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-}
-
-.contacts-hero-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 70vh;
-    filter: brightness(70%);
-    margin-bottom: 50px;
-}
-
-.contacts-hero {
-    position: relative;
-    width: 100%;
-}
-
-.contacts-hero-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4rem;
-    text-align: center;
-    font-family: 'Stolzl', sans-serif;
-    padding: 2rem;
-    width: 70%;
-}
-
+/* Events Page Styles start from here */
 .events-image img {
     object-fit: cover;
     width: 100%;
@@ -1193,13 +1033,13 @@ ul li {
 
 .events-hero-text {
     position: absolute;
-    top: 5%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 10rem;
     text-align: center;
-    font-family: 'Stolzl', sans-serif;
+    font-family: "Stolzl", sans-serif;
     padding: 2rem;
     width: 70%;
 }
@@ -1213,22 +1053,22 @@ ul li {
     font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: #2A2AD3;
-    font-family: 'Montserrat', sans-serif;
+    color: #2a2ad3;
+    font-family: "Montserrat", sans-serif;
 }
 
 .card-body h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: #111827;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
 }
 
 .card-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -1263,8 +1103,8 @@ ul li {
 
 .card h3 {
     margin-bottom: 0.5rem;
-    color: #2A2AD3;
-    font-family: 'Montserrat', sans-serif;
+    color: #2a2ad3;
+    font-family: "Montserrat", sans-serif;
 }
 
 .gallery-grid {
@@ -1320,7 +1160,7 @@ ul li {
 
 .major-event h2 {
     font-size: 1.8rem;
-    color: #2A2AD3;
+    color: #2a2ad3;
     margin-bottom: 0.75rem;
 }
 
@@ -1348,4 +1188,240 @@ ul li {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Contact Page Styles start from here */
+.contacts-hero-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
+    filter: brightness(70%);
+    margin-bottom: 50px;
+}
+
+.contacts-hero {
+    position: relative;
+    width: 100%;
+}
+
+.contacts-hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Stolzl", sans-serif;
+    padding: 2rem;
+    width: 70%;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2e3136;
+    color: #f9fafb;
+    padding: 3rem 1.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-left: 300px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left h3,
+.footer-right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #62bfed;
+}
+
+.footer-left p {
+    line-height: 1;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+    filter: none;
+}
+
+/* Mobile responsiveness for key sections */
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        gap: 10px;
+    }
+
+    .carousel {
+        height: 35vh;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .welcome-section,
+    .global-section {
+        gap: 1.5rem;
+        padding: 1rem 0.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-text h2,
+    .global-text h2 {
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
+    }
+
+    .welcome-text p,
+    .global-text p {
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+    }
+
+    .welcome-image img,
+    .global-image img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .btn-flip {
+        width: 100%;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .about-hero-text,
+    .house-church-hero-text,
+    .ministries-hero-text,
+    .contacts-hero-text,
+    .events-hero-text {
+        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
+        width: 95%;
+    }
+
+    .about-vision,
+    .pastors-container,
+    .church-locations,
+    .gallery-grid,
+    .past-events {
+        width: 100%;
+        flex-direction: column !important;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .vision-image img,
+    .kids-image-container img,
+    .media-image-container img {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        max-width: 320px;
+    }
+
+    .vision-text,
+    .pastor-text,
+    .location-text {
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .card-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .footer-content {
+        margin-left: 0;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .ministries-hero-text {
+        top: 6.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
+        width: 95%;
+        text-align: center;
+        line-height: 1.2;
+        -webkit-text-stroke: 0.5px white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 5px;
+        text-align: left;
+        line-height: 1rem;
+        margin-top: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: left;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+    }
+
+    .container img {
+        width: 100px;
+        margin-bottom: 0.5rem;
+    }
 }
