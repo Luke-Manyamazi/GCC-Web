@@ -718,7 +718,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #2a2ad3, #1ca9a5);
+    background: linear-gradient(to right, #454546, #666968);
 }
 
 .form-actions {
@@ -1008,14 +1008,14 @@ ul li {
 }
 
 .form-actions a {
-    color: #1565c0;
+    color: #494c4f;
     text-decoration: none;
     font-weight: 500;
 }
 
 .form-actions a:hover {
     text-decoration: underline;
-    color: #0d47a1;
+    color: #46484a;
 }
 
 /* Events Page Styles start from here */
@@ -1269,6 +1269,70 @@ ul li {
 
 /* Mobile responsiveness for key sections */
 @media screen and (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .footer-content,
+    .min-flex-container,
+    .content-section,
+    .min-flex-container.reverse {
+        flex-direction: column !important;
+        align-items: stretch;
+    }
+
+    .image-container,
+    .kids-image-container,
+    .media-image-container {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .card-grid {
+        width: 92%;
+        flex-direction: column !important;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+        box-sizing: border-box;
+    }
+
+    .welcome-section,
+    .global-section,
+    .church-locations,
+    .intro,
+    .hse-flex-container,
+    .section {
+        margin-left: 0.5rem;
+        margin-right: 0.8rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .footer-content {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .container {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -1319,6 +1383,52 @@ ul li {
         margin-left: 0;
     }
 
+    .intro {
+        width: 95%;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+        padding: 1rem 0.5rem;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    .hse-flex-container {
+        display: flex;
+        flex-direction: column !important;
+        gap: 1.5rem;
+        width: 100%;
+        margin: 0;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .hse-flex-container .column {
+        width: 100% !important;
+        margin: 0;
+        padding: 1rem 0.5rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f9f9f9;
+        /* Optional: subtle background for separation */
+        border-radius: 8px;
+        /* Optional: rounded corners */
+    }
+
+    .hse-flex-container .column img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .hse-flex-container .column h3,
+    .hse-flex-container .column p {
+        text-align: left;
+    }
+
     .about-hero-text,
     .house-church-hero-text,
     .ministries-hero-text,
@@ -1328,6 +1438,61 @@ ul li {
         padding: 1rem 0.5rem;
         width: 95%;
     }
+
+
+    .about-hero-image img,
+    .pastor-img img,
+    .moving-text-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .vision-image img {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+        object-fit: cover;
+    }
+
+    .about-hero,
+    .about-hero-image,
+    .about-vision,
+    .vision-text,
+    .pastors-container,
+    .pastor-text,
+    .pastor-img,
+    .moving-text,
+    .moving-text-image {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .vision-text,
+    .pastor-text {
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        text-align: left;
+    }
+
+    .about-hero-text,
+    .moving-text-h1 {
+        font-size: 1.3rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
 
     .about-vision,
     .pastors-container,
@@ -1340,7 +1505,7 @@ ul li {
         padding: 1rem 0.5rem;
     }
 
-    .vision-image img,
+
     .kids-image-container img,
     .media-image-container img {
         width: 100%;
@@ -1390,6 +1555,22 @@ ul li {
         line-height: 1.2;
         -webkit-text-stroke: 0.5px white;
     }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: left;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1424,4 +1605,139 @@ ul li {
         width: 100px;
         margin-bottom: 0.5rem;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 1rem;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #62bfed;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1.2rem;
+        color: white;
+        text-align: left;
+        margin: 0;
+    }
+
+    .container {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .carousel-slide img {
+        width: 100vw;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .carousel-slide h1.hero-text {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .welcome-section,
+    .global-section,
+    .church-locations,
+    .moving-text,
+    .footer-content {
+        flex-direction: column !important;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .welcome-image,
+    .global-image,
+    .location-image,
+    .moving-text-image {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-image img,
+    .global-image img,
+    .location-image img,
+    .moving-text-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .welcome-text,
+    .global-text,
+    .location-text {
+        width: 100%;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .btn-flip {
+        width: 100% !important;
+        max-width: 320px !important;
+        font-size: 1rem !important;
+        margin: 0.5rem auto 0 auto !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+
 }
