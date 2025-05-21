@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   // === Hero Carousel Logic ===
   let slides = document.querySelectorAll(".carousel-slide");
-  if (slides.length === 0) return; // no slides found, stop
-
-  let index = 0;
-
-  function showNextSlide() {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
+  if (slides.length) {
+    let index = 0;
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+    setInterval(showNextSlide, 5000);
   }
-
-  setInterval(showNextSlide, 5000); // Change slide every 5 seconds
 
   // === Reveal Animation Logic ===
   const observer = new IntersectionObserver(
@@ -19,45 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("reveal");
-          observer.unobserve(entry.target); // Animate once
+          observer.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.2 }
   );
 
-  document.querySelectorAll(".from-left, .from-right").forEach((el) => {
-    observer.observe(el);
-  });
+  const revealEls = document.querySelectorAll(".from-left, .from-right");
+  revealEls.forEach((el) => observer.observe(el));
 
   // === Toggle trigger logic ===
   document.querySelectorAll(".toggle-trigger").forEach(function (trigger) {
+    const parentList = trigger.closest("ul");
+    if (!parentList) return;
+
     trigger.addEventListener("click", function () {
-      const listItems = trigger
-        .closest("ul")
-        .querySelectorAll("li:not(.toggle-trigger)");
+      const listItems = parentList.querySelectorAll("li:not(.toggle-trigger)");
       listItems.forEach((item) => {
         item.classList.toggle("visible");
         item.classList.toggle("hidden");
       });
 
       const icon = trigger.querySelector(".icon");
-      if (icon.classList.contains("fa-plus-circle")) {
-        icon.classList.remove("fa-plus-circle");
-        icon.classList.add("fa-minus-circle");
-      } else {
-        icon.classList.remove("fa-minus-circle");
-        icon.classList.add("fa-plus-circle");
+      if (icon) {
+        icon.classList.toggle("fa-plus-circle");
+        icon.classList.toggle("fa-minus-circle");
       }
     });
   });
 
   // === Form submission logic ===
-  document
-    .getElementById("visitForm")
-    .addEventListener("submit", async function (e) {
+  const form = document.getElementById("visitForm");
+  if (form) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
-
       const data = {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
@@ -83,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = await response.json();
         if (result.result === "success") {
           alert("Form submitted successfully!");
-          document.getElementById("visitForm").reset();
+          form.reset();
         } else {
           alert("Submission failed.");
         }
@@ -92,4 +86,5 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Something went wrong.");
       }
     });
+  }
 });
