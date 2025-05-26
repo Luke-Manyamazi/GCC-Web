@@ -1429,9 +1429,12 @@ ul li {
         text-align: left;
     }
 
+    .ministries-hero-text {
+        top: 60%;
+    }
+
     .about-hero-text,
     .house-church-hero-text,
-    .ministries-hero-text,
     .contacts-hero-text,
     .events-hero-text {
         font-size: 1.5rem;
@@ -1439,10 +1442,29 @@ ul li {
         width: 95%;
     }
 
+    .moving-text-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-left: 0;
+    }
+
+    .ministries-hero-image h1 {
+        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
+        width: 95%;
+        top: 50%;
+    }
+
+    .events-image img,
+    .ministries-hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
     .about-hero-image img,
-    .pastor-img img,
-    .moving-text-image img {
+    .pastor-img img {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -1487,12 +1509,11 @@ ul li {
 
     .about-hero-text,
     .moving-text-h1 {
-        font-size: 1.3rem;
+        font-size: 2rem;
         padding: 1rem 0.5rem;
         text-align: center;
         line-height: 1.2;
     }
-
 
     .about-vision,
     .pastors-container,
