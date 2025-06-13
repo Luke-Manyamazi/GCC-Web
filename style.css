@@ -64,6 +64,13 @@ nav a:active {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 /* Index Page Carousel and Styles start from here */
 .carousel {
     position: relative;
